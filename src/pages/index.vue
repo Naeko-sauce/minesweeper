@@ -14,6 +14,7 @@
         v-for="i in 10"
         :key="i"
         h-10 w-10 border
+        hover:bg="light-50"
       >
         {{ (y - 1) * 10 + i }}
       </button>
