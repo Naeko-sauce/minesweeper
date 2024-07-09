@@ -1,45 +1,21 @@
-<script setup lang="ts" generic="T extends any, O extends any">
-defineOptions({
-  name: 'IndexPage',
-})
+<script setup lang="ts">
 
-const name = ref('')
-
-const router = useRouter()
-function go() {
-  if (name.value)
-    router.push(`/hi/${encodeURIComponent(name.value)}`)
-}
 </script>
 
 <template>
   <div>
-    <div i-carbon-campsite inline-block text-4xl />
-    <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse-lite" target="_blank">
-        Vitesse Lite
-      </a>
-    </p>
-    <p>
-      <em text-sm op75>Opinionated Vite Starter Template</em>
-    </p>
+    Minsweeper
 
-    <div py-4 />
-
-    <TheInput
-      v-model="name"
-      placeholder="What's your name?"
-      autocomplete="false"
-      @keydown.enter="go"
-    />
-
-    <div>
+    <div
+      v-for="y in 10"
+      :key="y"
+    >
       <button
-        class="m-3 text-sm btn"
-        :disabled="!name"
-        @click="go"
+        v-for="i in 10"
+        :key="i"
+        h-10 w-10 border
       >
-        Go
+        {{ (y - 1) * 10 + i }}
       </button>
     </div>
   </div>
