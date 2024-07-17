@@ -13,6 +13,7 @@
     "postinstall": "npx simple-git-hooks"
   },
   "dependencies": {
+    "@iconify-json/mdi": "^1.1.67",
     "@vueuse/core": "^10.9.0",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
